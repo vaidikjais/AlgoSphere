@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Window Visualization</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="CSS files/sliding window.css">
+    <script defer src="../script.js"></script>
+    <script defer src="/Algorithm/JS files/sliding window.js"></script>
+</head>
+<body>
+    <div class="icon" onclick="toggleDropdown()"></div>
+
+    <div class="dropdown" id="dropdownMenu">
+        <span class="close-btn" onclick="closeDropdown()">×</span>
+        <h3>Explore More Algo!</h3>
+        <div class="algobox" onclick="redirectTo('queue.html')">
+          <b>Queue</b>
+          <span class="selection-circle"></span>
+          Operates on a First In, First Out (FIFO) principle
+        </div>
+        <div class="algobox" onclick="redirectTo('stack.html')">
+          <b>Stack</b>
+          <span class="selection-circle"></span>
+          Operates on a Last In, Last Out (LIFO) principle
+        </div>
+        <div class="algobox" onclick="redirectTo('bubble sort.html')">
+          <b>Bubble Sort</b>
+          <span class="selection-circle"></span>
+          Bubble Sort Visualizer
+        </div>
+  
+        <div class="algobox" onclick="redirectTo('selection sort.html')">
+          <b>Selection Sort</b>
+          <span class="selection-circle"></span>
+          Selection Sort Visualizer
+        </div>
+  
+        <div class="algobox" onclick="redirectTo('merge sort.html')">
+          <b>Merge Sort</b>
+          <span class="selection-circle"></span>
+          Merge Sort Visualizer
+        </div>
+  
+        <div class="algobox" onclick="redirectTo('sliding window.html')">
+          <b>Sliding Window Sort</b>
+          <span class="selection-circle"></span>
+          Sliding Window Visualizer
+        </div>
+  
+        <div class="algobox" onclick="redirectTo('binary search.html')">
+          <b>Binary Search</b>
+          <span class="selection-circle"></span>
+          Binary Search Visualizer
+        </div>
+  
+        <div class="algobox" onclick="redirectTo('linked list.html')">
+          <b>Linked List</b>
+          <span class="selection-circle"></span>
+          Linked List Visualizer
+        </div>
+  
+        <div class="algobox" onclick="redirectTo('quick sort.html')">
+          <b>Quick Sort</b>
+          <span class="selection-circle"></span>
+          Quick Sort Visualizer
+        </div>
+  
+        <div class="algobox" onclick="redirectTo('two pointer.html')">
+          <b>Two Pointer Sort</b>
+          <span class="selection-circle"></span>
+          Two Pointer Visualizer
+        </div>
+  
+        <div class="algobox" onclick="redirectTo('sieve of eratosthenes.html')">
+          <b>Sieve of Eratosthenes</b>
+          <span class="selection-circle"></span>
+          Sieve of Eratosthenes Visualizer
+        </div>
+      </div>
+
+    <div class="container">
+        <div class="left-section pre-activity" style="height: 100vh;">
+            <h1 class="content" style="font-size: xx-large;">Sliding Window Visualization</h1>
+            <br><br>
+            <p class="content">Enter an array and window size to start visualization</p>
+
+            <div id="window-container" class="window-container"></div>
+            <div id="visualization" class="visualization"></div>
+            
+            <div class="controls">
+
+                <div class="input-data">
+                    <input type="text" id="array" placeholder="Enter numbers (comma separated)" class="input-box">
+                    <input type="number" id="window-size" placeholder="Window size" class="input-box">
+                </div>
+
+                <div class="button">
+                    <button id="start" class="start">Start</button>
+                    <button id="next" class="next" disabled>Next Step</button>
+                    <button id="reset" class="reset">Reset</button>
+                    <button id="randomArrayButton">Generate Random Array</button>
+                </div>
+
+                <br>
+                <div id="error-message" style="color: red; opacity: 0;"></div>
+            </div>
+        </div>
+    
+        <div class="right-section">
+            <div class="overview">
+                <div class="title">OVERVIEW</div>
+                <br>
+                <br>
+                <p class="content">The Sliding Window Algorithm is a technique used to optimize problems involving arrays or lists by maintaining a window (subarray) that slides over the data structure. It is particularly useful for problems that involve finding subarrays, calculating sums, or determining the maximum/minimum values within a specific window size.</p>
+            </div>
+    
+            <div class="instructions">
+                <div class="title">Operations</div>
+                <br>
+                <ul>
+                    <li class="content">Start: Initialize the sliding window with given size.</li>
+                    <li class="content">Next Step: Move the window one step forward.</li>
+                    <li class="content">Reset: Clear all inputs and restart.</li>
+                </ul>
+                <br>
+                <div class="title">Terminologies</div>
+                <br>
+                <ul>
+                    <li class="content">Window Size: The number of elements considered in one step.</li>
+                    <li class="content">Current Window: The current segment being processed.</li>
+                    <li class="content">Sliding: The process of shifting the window forward.</li>
+                </ul>
+            </div>  
+        </div>
+    </div>
+</body>
+</html>
