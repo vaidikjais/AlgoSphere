@@ -1,0 +1,267 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    height: 100vh;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    height: 100%;
+    align-items: flex-start;
+    position: relative;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    gap: 20px;
+    width: 30%;
+    height: 100%;
+}
+
+.overview, .instructions {
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+}
+
+.title {
+    font-size: large;
+    font-weight: bold;
+    font-family: eb-garamond;
+}
+
+.overview { background-color: #d8e3ff; }
+.instructions { background-color: #ffd8f0; }
+.pre-activity { background-color: #ffe4b3; }
+.title {margin-bottom: 20px;}
+
+
+ul {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+
+.content {
+    font-family: eb-garamond;
+    font-size: large;
+}
+
+.start-search{ background: #4552a5; color: white;}
+.reset{ background: #28486a; color: white;}
+.random-array{ background: rgb(60, 60, 124); color: white;}
+
+
+/* Popup styling */
+.popup {
+    display: none;
+    background: lightblue;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Binary Search Visualization */
+
+.array-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    align-self: center;
+}
+
+.array-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.array-index {
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 5px; /* Adds spacing above array item */
+    opacity: 0; /* Starts hidden */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.array-item {
+    background-color: coral;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#array-input,#target-input{
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 270px;
+    min-height: 40px;
+    min-width: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+button.disabled {
+    opacity: 0.5; 
+    cursor: not-allowed; 
+    pointer-events: none; 
+}
+
+.input-data {
+    display: flex;
+    gap: 10px; 
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.speed {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.indices-container {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.index-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+}
+
+.hidden {
+    display: none; /* Keep hidden class to dynamically show */
+}
+
+
+.highlight {
+    background-color: #5568E5; /* Adjust if necessary */
+    color: white;
+    transform: scale(1.1);
+}
+
+@media(max-width : 850px)
+{
+    .container{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .input-data {
+        flex-direction: column;
+    }
+
+    .left-section,.right-section,.overview,.instructions{
+        width: 100%;
+    }
+    #controls{
+        display: block;
+    }
+
+    ul{
+        padding-left: 0;
+    }
+}
+
+@media(max-width : 550px)
+{
+    ul{
+        padding-left: 20px;
+        margin-top: 0;
+    }
+
+    body{
+        padding: 0px;
+        border-radius: 0;
+    }
+
+    .left-section, .overview, .instructions{
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 415px) {
+
+    .array-item {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 353px) {
+
+    .array-item {
+        font-size: 12px;
+        padding: 4px;
+    }
+}
