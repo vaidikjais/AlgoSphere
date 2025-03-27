@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search Visualizer</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/Algorithm/CSS files/binary search.css">
+    <script src="../script.js" defer></script>
+    <script src="/Algorithm/JS files/binary search.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="icon" onclick="toggleDropdown()"></div>
+
+    <div class="dropdown" id="dropdownMenu">
+        <span class="close-btn" onclick="closeDropdown()">×</span>
+        <h3>Explore More Algo!</h3>
+        <div class="algobox" onclick="redirectTo('queue.html')">
+          <b>Queue</b>
+          <span class="selection-circle"></span>
+          Operates on a First In, First Out (FIFO) principle
+        </div>
+        <div class="algobox" onclick="redirectTo('stack.html')">
+          <b>Stack</b>
+          <span class="selection-circle"></span>
+          Operates on a Last In, Last Out (LIFO) principle
+        </div>
+        <div class="algobox" onclick="redirectTo('bubble sort.html')">
+          <b>Bubble Sort</b>
+          <span class="selection-circle"></span>
+          Bubble Sort Visualizer
+        </div>
+  
+        <div class="algobox" onclick="redirectTo('selection sort.html')">
+          <b>Selection Sort</b>
+          <span class="selection-circle"></span>
+          Selection Sort Visualizer
+        </div>
+  
+        <div class="algobox" onclick="redirectTo('merge sort.html')">
+          <b>Merge Sort</b>
+          <span class="selection-circle"></span>
+          Merge Sort Visualizer
+        </div>
+  
+        <div class="algobox" onclick="redirectTo('sliding window.html')">
+          <b>Sliding Window Sort</b>
+          <span class="selection-circle"></span>
+          Sliding Window Visualizer
+        </div>
+  
+        <div class="algobox" onclick="redirectTo('binary search.html')">
+          <b>Binary Search</b>
+          <span class="selection-circle"></span>
+          Binary Search Visualizer
+        </div>
+  
+        <div class="algobox" onclick="redirectTo('linked list.html')">
+          <b>Linked List</b>
+          <span class="selection-circle"></span>
+          Linked List Visualizer
+        </div>
+  
+        <div class="algobox" onclick="redirectTo('quick sort.html')">
+          <b>Quick Sort</b>
+          <span class="selection-circle"></span>
+          Quick Sort Visualizer
+        </div>
+  
+        <div class="algobox" onclick="redirectTo('two pointer.html')">
+          <b>Two Pointer Sort</b>
+          <span class="selection-circle"></span>
+          Two Pointer Visualizer
+        </div>
+  
+        <div class="algobox" onclick="redirectTo('sieve of eratosthenes.html')">
+          <b>Sieve of Eratosthenes</b>
+          <span class="selection-circle"></span>
+          Sieve of Eratosthenes Visualizer
+        </div>
+      </div>
+
+    <div class="container">
+     <div class="left-section pre-activity">
+        <h1 class="content" style="font-size: xx-large;">Binary Search Visualization</h1>
+        <br>
+        <br>
+        <p class="content">Enter a Sorted Array and a Target value to search</p>
+            <div id="array-container" class="array-container"></div>
+
+            <div class="controls">
+
+                <div id="popup-message" class="popup"></div>
+
+                <!-- Dynamic Indices (Initially Hidden) -->
+                <div id="indices-display" class="indices-container">
+                    <button id="low-index" class="index-btn hidden">Low</button>
+                    <button id="middle-index" class="index-btn hidden">Middle</button>
+                    <button id="high-index" class="index-btn hidden">High</button>
+                </div>
+
+                <br>
+                <!-- Input Fields -->
+                <div class="input-data">
+                    <input type="text" id="array-input" placeholder="Enter sorted numbers (comma-separated)" style="font-family: eb garamond; font-size: medium;" >
+                    <input type="number" id="target-input" placeholder="Enter target number" style="font-family: eb garamond; font-size: medium;">
+                </div>
+                
+            
+                <!-- Buttons -->
+                <div class="buttons">
+                    <button class="start-search">Start Search</button>
+                    <button class="reset">Reset</button>
+                    <button class="random-array" id="random-array-btn">Random Array</button>
+                </div>
+            
+                <!-- Speed Control -->
+                <div class="speed">
+                    <label for="speed-slider">Speed</label>
+                    <input type="range" id="speed-slider" min="100" max="2000" value="1000" step="100">
+                </div>
+                
+                <br>
+                <div id="error-message" style="color: red; opacity: 0;"></div>
+
+            
+            </div>
+            
+     </div>
+
+        <div class="right-section">
+            <div class="overview">
+                <div class="title">OVERVIEW</div>
+                
+                <p class="content">Binary Search Algorithm is a searching algorithm used in a sorted array by repeatedly dividing the search interval in half. The idea of binary search is to use the information that the array is sorted and reduce the time complexity to O(log N). </p>
+            </div>
+            <div class="instructions">
+                <div class="title">Steps</div>
+                <ul>
+                    
+                    <li class="content">Find the middle element of the array.</li>
+                    <li class="content">If it matches the target, return its index.</li>
+                    <li class="content">If the target is smaller, search the left half.</li>
+                    <li class="content">If the target is larger, search the right half.</li>
+                    <li class="content">Repeat until the element is found or the array is exhausted.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
