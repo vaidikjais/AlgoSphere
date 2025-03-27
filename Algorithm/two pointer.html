@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Two Pointer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="/Algorithm/CSS files/two pointer.css" />
+    <script src="../script.js"></script>
+    <script src="/Algorithm/JS files/two pointer.js"></script>
+  </head>
+  <body>
+    <div class="icon" onclick="toggleDropdown()"></div>
+
+    <div class="dropdown" id="dropdownMenu">
+      <span class="close-btn" onclick="closeDropdown()">×</span>
+      <h3>Explore More Algo!</h3>
+      <div class="algobox" onclick="redirectTo('queue.html')">
+        <b>Queue</b>
+        <span class="selection-circle"></span>
+        Operates on a First In, First Out (FIFO) principle
+      </div>
+      <div class="algobox" onclick="redirectTo('stack.html')">
+        <b>Stack</b>
+        <span class="selection-circle"></span>
+        Operates on a Last In, Last Out (LIFO) principle
+      </div>
+      <div class="algobox" onclick="redirectTo('bubble sort.html')">
+        <b>Bubble Sort</b>
+        <span class="selection-circle"></span>
+        Bubble Sort Visualizer
+      </div>
+
+      <div class="algobox" onclick="redirectTo('selection sort.html')">
+        <b>Selection Sort</b>
+        <span class="selection-circle"></span>
+        Selection Sort Visualizer
+      </div>
+
+      <div class="algobox" onclick="redirectTo('merge sort.html')">
+        <b>Merge Sort</b>
+        <span class="selection-circle"></span>
+        Merge Sort Visualizer
+      </div>
+
+      <div class="algobox" onclick="redirectTo('sliding window.html')">
+        <b>Sliding Window Sort</b>
+        <span class="selection-circle"></span>
+        Sliding Window Visualizer
+      </div>
+
+      <div class="algobox" onclick="redirectTo('binary search.html')">
+        <b>Binary Search</b>
+        <span class="selection-circle"></span>
+        Binary Search Visualizer
+      </div>
+
+      <div class="algobox" onclick="redirectTo('linked list.html')">
+        <b>Linked List</b>
+        <span class="selection-circle"></span>
+        Linked List Visualizer
+      </div>
+
+      <div class="algobox" onclick="redirectTo('quick sort.html')">
+        <b>Quick Sort</b>
+        <span class="selection-circle"></span>
+        Quick Sort Visualizer
+      </div>
+
+      <div class="algobox" onclick="redirectTo('two pointer.html')">
+        <b>Two Pointer Sort</b>
+        <span class="selection-circle"></span>
+        Two Pointer Visualizer
+      </div>
+
+      <div class="algobox" onclick="redirectTo('sieve of eratosthenes.html')">
+        <b>Sieve of Eratosthenes</b>
+        <span class="selection-circle"></span>
+        Sieve of Eratosthenes Visualizer
+      </div>
+    </div>
+    <!-- Main container -->
+    <div class="container">
+      <!-- Left section for input and visualization-->
+      <div class="left-section pre-activity" style="height: 100vh">
+        <h1 class="content" style="font-size: xx-large">
+          Two Pointer Approach
+        </h1>
+
+        <div id="visualization-container" class="visualization-container"></div>
+        <div id="popup-message" class="popup"></div>
+
+        <div class="controls" id="controls">
+          <!-- User input fields -->
+          <div class="input-data">
+            <input
+              type="text"
+              id="array-input"
+              placeholder="Enter sorted numbers (comma-separated)"
+            />
+            <input type="number" id="target-input" placeholder="Enter sum" />
+          </div>
+          <!-- Action buttons -->
+          <div class="buttons">
+            <button id="random-array-btn">Generate Random Array</button>
+            <button id="find-pairs-btn">Find Pairs</button>
+            <button id="reset-btn">Reset</button>
+          </div>
+
+         <!-- Speed Control -->
+                <div class="speed">
+                    <label for="speed-slider">Speed</label>
+                    <input type="range" id="speed-slider" min="100" max="2000" value="1000" step="100">
+                </div>
+                
+                <br>
+                <div id="error-message" style="color: red; opacity: 0;"></div>
+
+        </div>
+      </div>
+
+      <!-- Right section for information -->
+
+      <div class="right-section">
+        <div class="overview">
+          <div class="title">OVERVIEW</div>
+          <br />
+          <br />
+          <p>
+            The two-pointer technique is an algorithmic approach that uses two indices (pointers) to traverse an array efficiently.
+             It is commonly used for searching, sorting, and optimization problems, reducing time complexity from O(N²) to O(N) in many cases. 
+             The pointers either move towards each other or in the same direction based on conditions.
+          </p>
+        </div>
+
+        <!-- Step-by-step instructions -->
+        <div class="instructions">
+          <div class="title" class = "content">Steps</div>
+          <br /><br />
+          <ul>
+            <li class="content">Initialize Pointers: Set up two pointers at suitable positions (start & end or both at the start).</li>
+            <li class="content">If working with a sorted array, adjust pointers based on comparisons.</li>
+            <li class="content">If working with a window-based problem, adjust pointers to expand or shrink the window.</li>
+            <li class="content">Update State: Perform necessary operations (sum, merge, partition, etc.) based on conditions.</li>
+            <li class="content">Stop Condition: The algorithm stops when pointers meet or cross, or when a solution is found.</li>
+            <br />
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
