@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="CSS files/stack.css">
+    <script src="../script.js"></script>
+    <script src="JS files/stack.js"></script>
+</head>
+<body>
+    <div class="icon" onclick="toggleDropdown()"></div>
+
+    <div class="dropdown" id="dropdownMenu">
+        <span class="close-btn" onclick="closeDropdown()">×</span>
+        <h3>Explore More Algo!</h3>
+        <div class="algobox" onclick="redirectTo('queue.html')">
+            <b>Queue</b>
+            <span class = "selection-circle"></span>
+            Operates on a First In, First Out (FIFO) principle
+        </div>
+        <div class="algobox" onclick="redirectTo('stack.html')">
+            <b>Stack</b>
+            <span class = "selection-circle"></span>
+            Operates on a Last In, Last Out (LIFO) principle
+        </div>
+        <div class="algobox" onclick="redirectTo('bubble sort.html')">
+            <b>Bubble Sort</b>
+            <span class = "selection-circle"></span>
+            Bubble Sort Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('selection sort.html')">
+            <b>Selection Sort</b>
+            <span class = "selection-circle"></span>
+            Selection Sort Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('merge sort.html')">
+            <b>Merge Sort</b>
+            <span class = "selection-circle"></span>
+            Merge Sort Visualizer
+        </div>
+
+
+        <div class="algobox" onclick="redirectTo('sliding window.html')">
+            <b>Sliding Window Sort</b>
+            <span class = "selection-circle"></span>
+            Sliding Window Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('binary search.html')">
+            <b>Binary Search</b>
+            <span class = "selection-circle"></span>
+            Binary Search Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('linked list.html')">
+            <b>Linked List</b>
+            <span class = "selection-circle"></span>
+            Linked List Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('quick sort.html')">
+            <b>Quick Sort</b>
+            <span class = "selection-circle"></span>
+            Quick Sort Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('two pointer.html')">
+            <b>Two Pointer Sort</b>
+            <span class = "selection-circle"></span>
+            Two Pointer Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('sieve of eratosthenes.html')">
+            <b>Sieve of Eratosthenes</b>
+            <span class = "selection-circle"></span>
+            Sieve of Eratosthenes Visualizer
+        </div>
+
+    </div>
+
+<div class="container">
+    <div class="left-section pre-activity" style="height: 100vh;">
+        <h1 class="content" style="font-size: xx-large;">Stack Visualization</h1>
+        <br>
+        <br>
+        <p class="content">Start your Stack, Add Elements using Push</p>
+        <br>
+        <br>
+
+        <div id="stack-wrapper">
+            <div id="stack-container"></div>
+            <div id="popup-message"></div>
+            <div id="controls">
+                <input type="text" id="element" placeholder="Enter Value" style="font-family: eb garamond; font-size: medium;">
+                <button class="push">Push</button>
+                <button class="pop">Pop</button>
+                <button class="top">Top</button>
+                <button class="size">Size</button>
+                <button class="empty">Empty</button>
+                <button class="reset">Reset</button>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+        <div class="right-section">
+            <div class="overview">
+                <div class="title">OVERVIEW</div>
+                <br>
+                <br>
+                <p class="content">A Stack is a linear data structure that follows a particular order in which the operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out). LIFO implies that the element that is inserted last, comes out first and FILO implies that the element that is inserted first, comes out last.
+                </p>
+            </div>
+
+    
+            <div class="instructions">
+                <div class="title" >Operations</div>
+                <br><br>
+                <ul>
+                    <li class="content">push() to insert an element into the stack</li>
+                    <li class="content">pop() to remove an element from the stack</li>
+                    <li class="content">top() Returns the top element of the stack.</li>
+                    <li class="content">isEmpty() returns true if stack is empty else false.</li>
+                    <li class="content">size() returns the number of elements currently present in stack.</li>
+                    <br>
+                </ul>
+
+                <div class="title">Key Points</div>
+                <br>
+                <br>
+                    <ul>
+                        <li class="content">It is called as stack because it behaves like a real-world stack, piles of books, etc.</li>
+                        <li class="content">A Stack is an abstract data type with a pre-defined capacity, which means that it can store the elements of a limited size.</li>
+                        <li class="content">It is a data structure that follows some order to insert and delete the elements, and that order can be LIFO or FILO.</li>
+                        <li class="content">Elements in a stack follow a vertically linear arrangement</li>
+                        <li class="content">Visualizing a physical stack of objects helps grasp the concept</li>
+                        
+                    </ul>
+                </div>  
+            </div>
+</div>
+    
+    
+    
+</body>
+</html>
