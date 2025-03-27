@@ -1,0 +1,209 @@
+body {
+    font-family: eb-garamond;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 20px;
+}
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    height: 100vh; 
+    
+}
+.left-section {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+}
+.right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 30%;
+    height: 100%;
+    overflow-y: auto;
+
+}
+.overview, .instructions {
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+}
+.title {
+    font-size: large;
+    font-weight: bold;
+    font-family: eb-garamond;
+}
+.overview { background-color: #d8e3ff; }
+.instructions { background-color: #ffd8f0; display: flex; flex-direction: column; }
+.pre-activity { background-color: #ffe4b3; }
+
+ul {
+    padding-left: 20px;
+}
+
+
+.content{
+    font-family: eb-garamond;
+    font-size: large;
+}
+
+.bar-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    top: 20%;
+    gap: 10px;
+    max-height: 400px;
+}
+
+.bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    align-self: center;
+    height: 220px;
+}
+
+.bar {
+    width: 40px;
+    border-radius: 5px;
+    margin: 2px;
+    background-color: rgba(200, 18, 18, 0.788);
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    color: white;
+    justify-content: center;
+    font-size: small;
+    font-family: eb garamond;
+    font-weight: bold;
+}
+
+.bar-number {
+    position: absolute;
+    margin-top: 5px;
+}
+
+
+#controls {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#speed-control {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+#element{
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 270px;
+    min-height: 40px;
+    min-width: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.random {background: rgb(71, 101, 142); color: white;}
+.sort {background: rgb(39, 55, 128); color: white;}
+.reset {background-color: rgb(57, 57, 106); color: white;}
+
+#error-message {
+    color: red;
+    font-size: 18px; 
+    margin-top: 8px;
+    text-align: center; 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    height: 24px; 
+}
+
+button.disabled {
+    opacity: 0.5; 
+    cursor: not-allowed; 
+    pointer-events: none; 
+}
+
+
+
+@media (max-width: 400px) {
+    .bar {
+        width: 30px;
+    }
+
+    #error-message{
+        font-size: 14px;
+    }
+
+    .left-section{
+        height: fit-content;
+    }
+}
+
+@media(max-width : 800px)
+{
+    .container{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-section{
+        width: 100%;
+    }
+
+    .right-section{
+        width: 100%;
+    }
+
+    .overview, .instructions{
+        width: 100%;
+        display: block;
+    }
+    #controls{
+        display: block;
+    }
+}
