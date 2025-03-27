@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="CSS files/queue.css">
+    <script src="../script.js"></script>
+    <script src="JS files/queue.js"></script>
+</head>
+<body>
+    <div class="icon" onclick="toggleDropdown()"></div>
+
+    <div class="dropdown" id="dropdownMenu">
+        <span class="close-btn" onclick="closeDropdown()">×</span>
+        <h3>Explore More Algo!</h3>
+        <div class="algobox" onclick="redirectTo('queue.html')">
+            <b>Queue</b>
+            <span class = "selection-circle"></span>
+            Operates on a First In, First Out (FIFO) principle
+        </div>
+        <div class="algobox" onclick="redirectTo('stack.html')">
+            <b>Stack</b>
+            <span class = "selection-circle"></span>
+            Operates on a Last In, Last Out (LIFO) principle
+        </div>
+        <div class="algobox" onclick="redirectTo('bubble sort.html')">
+            <b>Bubble Sort</b>
+            <span class = "selection-circle"></span>
+            Bubble Sort Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('selection sort.html')">
+            <b>Selection Sort</b>
+            <span class = "selection-circle"></span>
+            Selection Sort Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('merge sort.html')">
+            <b>Merge Sort</b>
+            <span class = "selection-circle"></span>
+            Merge Sort Visualizer
+        </div>
+
+
+        <div class="algobox" onclick="redirectTo('sliding window.html')">
+            <b>Sliding Window Sort</b>
+            <span class = "selection-circle"></span>
+            Sliding Window Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('binary search.html')">
+            <b>Binary Search</b>
+            <span class = "selection-circle"></span>
+            Binary Search Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('linked list.html')">
+            <b>Linked List</b>
+            <span class = "selection-circle"></span>
+            Linked List Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('quick sort.html')">
+            <b>Quick Sort</b>
+            <span class = "selection-circle"></span>
+            Quick Sort Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('two pointer.html')">
+            <b>Two Pointer Sort</b>
+            <span class = "selection-circle"></span>
+            Two Pointer Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('sieve of eratosthenes.html')">
+            <b>Sieve of Eratosthenes</b>
+            <span class = "selection-circle"></span>
+            Sieve of Eratosthenes Visualizer
+        </div>
+
+    </div>
+
+<div class="container">
+    <div class="left-section pre-activity" style="height: 100vh;">
+        <h1 class="content" style="font-size: xx-large;">Queue Visualization</h1>
+        <br>
+        <br>
+        <p class="content">Start your Queue, Add Elements using Enqueue</p>
+
+        <div class="queue-wrapper">
+            <div id="queue-container" class="queue-container"></div>
+        </div>
+
+        <div class="controls">
+
+            <div class="input-data">
+                <input type="text" id="element" placeholder="Enter Element" style="font-family: eb-garamond; font-size: medium;">
+            </div>
+
+            <div class="buttons">
+                <button class="enqueue">Enqueue</button>
+                <button class="dequeue">Dequeue</button>
+                <button class="empty">Is Empty</button>
+                <button class="size">Size</button>
+                <button class="peek">Peek</button>
+                <button class="reset">Reset</button>
+            </div>
+        
+            <div id="popup-message" class="popup"></div>
+        </div>
+    </div>
+    
+    
+        <div class="right-section">
+            <div class="overview">
+                <div class="title">OVERVIEW</div>
+                <br>
+                <p class="content">A Queue Data Structure is a fundamental concept in computer science used for storing and managing data in a specific order. It follows the principle of "First in, First out" (FIFO), where the first element added to the queue is the first one to be removed.
+                </p>
+            </div>
+    
+            <div class="instructions">
+                <div class="title" >Operations</div>
+                <br>
+                <ul>
+                    <li class="content">Enqueue (Insert): Adds an element to the rear of the queue.</li>
+                    <li class="content">Dequeue (Delete): Removes and returns the element from the front of the queue.</li>
+                    <li class="content">Peek (Front): Returns the element at the front of the queue without removing it.</li>
+                    <li class="content">isEmpty: Checks if the queue is empty.</li>
+                    <li class="content">Size: Checks the number of elements in the queue.</li>
+                </ul>
+
+                <br>
+                <br>
+                <div class="title">Terminologies</div>
+                <br>
+                    <ul>
+                        <li class="content">Front: Position of the entry in a queue ready to be served, that is, the first entry that will be removed from the queue, is called the front of the queue. It is also referred as the head of the queue.</li>
+                        <li class="content">Rear: Position of the last entry in the queue, that is, the one most recently added, is called the rear of the queue. It is also referred as the tail of the queue.</li>
+                        <li class="content">Size: Size refers to the current number of elements in the queue.</li>
+                        <li class="content">Capacity: Capacity refers to the maximum number of elements the queue can hold.</li>
+                    </ul>
+                </div>  
+            </div>
+</div>
+    
+    
+    
+</body>
+</html>
