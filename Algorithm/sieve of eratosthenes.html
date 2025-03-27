@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sieve of Eratosthenes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./CSS files/sieve of eratosthenes.css">
+    <script src="../script.js"></script>
+    <script src="./JS files/sieve of eratosthenes.js"></script>
+</head>
+<body>
+    <div class="icon" onclick="toggleDropdown()"></div>
+
+    <div class="dropdown" id="dropdownMenu">
+        <span class="close-btn" onclick="closeDropdown()">×</span>
+        <h3>Explore More Algo!</h3>
+        <div class="algobox" onclick="redirectTo('queue.html')">
+            <b>Queue</b>
+            <span class = "selection-circle"></span>
+            Operates on a First In, First Out (FIFO) principle
+        </div>
+        <div class="algobox" onclick="redirectTo('stack.html')">
+            <b>Stack</b>
+            <span class = "selection-circle"></span>
+            Operates on a Last In, Last Out (LIFO) principle
+        </div>
+        <div class="algobox" onclick="redirectTo('bubble sort.html')">
+            <b>Bubble Sort</b>
+            <span class = "selection-circle"></span>
+            Bubble Sort Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('selection sort.html')">
+            <b>Selection Sort</b>
+            <span class = "selection-circle"></span>
+            Selection Sort Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('merge sort.html')">
+            <b>Merge Sort</b>
+            <span class = "selection-circle"></span>
+            Merge Sort Visualizer
+        </div>
+
+
+        <div class="algobox" onclick="redirectTo('sliding window.html')">
+            <b>Sliding Window Sort</b>
+            <span class = "selection-circle"></span>
+            Sliding Window Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('binary search.html')">
+            <b>Binary Search</b>
+            <span class = "selection-circle"></span>
+            Binary Search Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('linked list.html')">
+            <b>Linked List</b>
+            <span class = "selection-circle"></span>
+            Linked List Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('quick sort.html')">
+            <b>Quick Sort</b>
+            <span class = "selection-circle"></span>
+            Quick Sort Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('two pointer.html')">
+            <b>Two Pointer Sort</b>
+            <span class = "selection-circle"></span>
+            Two Pointer Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('sieve of eratosthenes.html')">
+            <b>Sieve of Eratosthenes</b>
+            <span class = "selection-circle"></span>
+            Sieve of Eratosthenes Visualizer
+        </div>
+
+    </div>
+
+<div class="container">
+    <div class="left-section pre-activity">
+        <h1 class="content" style="font-size: xx-large;">Sieve of Eratosthenes</h1>
+        <br>
+        <p class="content">To find Prime Numbers between 1 and 100</p>
+        
+    
+        <div class="grid" id="grid"></div>
+
+        <div id="controls">
+            <div id="speed-control">
+                <label for="speed">Speed:</label>
+                <input type="range" id="speed" min="50" max="1000" step="50" value="500">
+            </div>
+            <div class="buttons">
+                <button onclick="startSieve()" class="start">Start</button>
+                <button onclick="clearGrid()" class ="clear">Clear</button>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+        <div class="right-section">
+            <div class="overview">
+                <div class="title">OVERVIEW</div>
+                <br>
+                <br>
+                <p class="content">The Sieve of Eratosthenes is a highly efficient algorithm for finding all prime numbers up to a given number N. Instead of checking each number individually, it eliminates multiples of primes systematically, reducing unnecessary calculations. The algorithm runs in O(N log log N) time, making it much faster than basic methods like trial division.
+                </p>
+            </div>
+
+    
+            <div class="instructions">
+                <div class="title" >Working</div>
+                <br><br>
+                <ul>
+                    <li class="content">Start with a list of numbers from 1 to N and assume all are prime.</li>
+                    <li class="content">Mark multiples of each prime as non-prime, starting from 2.</li>
+                    <li class="content">Continue the process for numbers up to √N, leaving only prime numbers unmarked.</li>
+                </ul>
+
+                <br><br>
+
+                <div class="title">Color Representation</div>
+                <br><br>
+                    <ul>
+                        <li class="content">Grey → Prime Numbers.</li>
+                        <li class="content">Aqua → Non-Prime.</li>
+                        <li class="content">Pink → Processing.</li>
+                    </ul>
+            </div>  
+        </div>
+</div>
+    
+</body>
+</html>

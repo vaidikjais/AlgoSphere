@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Sort</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./CSS files/merge sort.css">
+    <script src="../script.js"></script>
+    <script src="./JS files/merge sort.js"></script>
+</head>
+<body>
+    <div class="icon" onclick="toggleDropdown()"></div>
+
+    <div class="dropdown" id="dropdownMenu">
+        <span class="close-btn" onclick="closeDropdown()">×</span>
+        <h3>Explore More Algo!</h3>
+        <div class="algobox" onclick="redirectTo('queue.html')">
+            <b>Queue</b>
+            <span class = "selection-circle"></span>
+            Operates on a First In, First Out (FIFO) principle
+        </div>
+        <div class="algobox" onclick="redirectTo('stack.html')">
+            <b>Stack</b>
+            <span class = "selection-circle"></span>
+            Operates on a Last In, Last Out (LIFO) principle
+        </div>
+        <div class="algobox" onclick="redirectTo('bubble sort.html')">
+            <b>Bubble Sort</b>
+            <span class = "selection-circle"></span>
+            Bubble Sort Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('selection sort.html')">
+            <b>Selection Sort</b>
+            <span class = "selection-circle"></span>
+            Selection Sort Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('merge sort.html')">
+            <b>Merge Sort</b>
+            <span class = "selection-circle"></span>
+            Merge Sort Visualizer
+        </div>
+
+
+        <div class="algobox" onclick="redirectTo('sliding window.html')">
+            <b>Sliding Window Sort</b>
+            <span class = "selection-circle"></span>
+            Sliding Window Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('binary search.html')">
+            <b>Binary Search</b>
+            <span class = "selection-circle"></span>
+            Binary Search Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('linked list.html')">
+            <b>Linked List</b>
+            <span class = "selection-circle"></span>
+            Linked List Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('quick sort.html')">
+            <b>Quick Sort</b>
+            <span class = "selection-circle"></span>
+            Quick Sort Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('two pointer.html')">
+            <b>Two Pointer Sort</b>
+            <span class = "selection-circle"></span>
+            Two Pointer Visualizer
+        </div>
+
+        <div class="algobox" onclick="redirectTo('sieve of eratosthenes.html')">
+            <b>Sieve of Eratosthenes</b>
+            <span class = "selection-circle"></span>
+            Sieve of Eratosthenes Visualizer
+        </div>
+
+    </div>
+
+<div class="container">
+    <div class="left-section pre-activity">
+        <h1 class="content" style="font-size: xx-large;">Merge Sort Visualization</h1>
+        
+        <div id="merge_sort_container"></div>
+
+        <div id="controls">
+            <div id="speed-control">
+                <label for="speed">Speed:</label>
+                <input type="range" id="speed" min="50" max="1000" step="50" value="500">
+            </div>
+            <div class="buttons">
+                <input type="text" id="element" placeholder="Enter comma-separated numbers to sort" style="font-family: eb garamond; font-size: medium;">
+                <div id="error-message"></div>
+                <button onclick="generateArray()" class="random">Generate Array</button>
+                <button onclick="startMergeSort()" class="sort">Sort</button>
+                <button onclick="resetArray()" class="reset">Reset</button>
+            </div>
+            
+        </div>
+
+        
+    </div>
+    
+    
+    <div class="right-section">
+        <div class="overview">
+            <div class="title">OVERVIEW</div>
+            <br>
+            <br>
+            <p class="content">Merge sort is a sorting algorithm that follows the divide-and-conquer approach. It works by recursively dividing the input array into smaller subarrays and sorting those subarrays then merging them back together to obtain the sorted array.
+            </p>
+        </div>
+
+
+        <div class="instructions">
+            <div class="title" >Working</div>
+            <br><br>
+            <ul>
+                <li class="content">Divide:  Divide the list or array recursively into two halves until it can no more be divided. </li>
+                <br>
+                <li class="content">Conquer:  Each subarray is sorted individually using the merge sort algorithm. </li>
+                <br>
+                <li class="content">Merge:  The sorted subarrays are merged back together in sorted order. The process continues until all elements from both subarrays have been merged. </li>
+                <br>
+            </ul>
+
+            <div class="title">Complexity</div>
+            <br>
+            <br>
+                <ul>
+                    <li class="content">Time Complexity: O(nlogn) <br><br> Reason: At each step, we divide the whole array, for that logn and we assume n steps are taken to get sorted array, so overall time complexity will be nlogn.</li><br>
+                    <li class="content">Space Complexity: O(n) <br><br> Reason: We are using a temporary array to store elements in sorted order.</li><br>
+                    <li class="content">Auxiliary Space Complexity: O(n)
+
+                    </li>
+                    
+                </ul>
+            </div>  
+        </div>
+</div>
+    
+</body>
+</html>
