@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AlgoSphere</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="icon" onclick="toggleDropdown()"></div>
+
+    <div class="dropdown" id="dropdownMenu">
+      <span class="close-btn" onclick="closeDropdown()">×</span>
+      <h3>Explore More Algo!</h3>
+      <div class="algobox" onclick="redirectTo('Algorithm/queue.html')">
+        <b>Queue</b>
+        <span class="selection-circle"></span>
+        Operates on a First In, First Out (FIFO) principle
+      </div>
+      <div class="algobox" onclick="redirectTo('Algorithm/stack.html')">
+        <b>Stack</b>
+        <span class="selection-circle"></span>
+        Operates on a Last In, Last Out (LIFO) principle
+      </div>
+      <div class="algobox" onclick="redirectTo('Algorithm/bubble sort.html')">
+        <b>Bubble Sort</b>
+        <span class="selection-circle"></span>
+        Bubble Sort Visualizer
+      </div>
+
+      <div
+        class="algobox"
+        onclick="redirectTo('Algorithm/selection sort.html')"
+      >
+        <b>Selection Sort</b>
+        <span class="selection-circle"></span>
+        Selection Sort Visualizer
+      </div>
+
+      <div class="algobox" onclick="redirectTo('Algorithm/merge sort.html')">
+        <b>Merge Sort</b>
+        <span class="selection-circle"></span>
+        Merge Sort Visualizer
+      </div>
+
+      <div
+        class="algobox"
+        onclick="redirectTo('Algorithm/sliding window.html')"
+      >
+        <b>Sliding Window Sort</b>
+        <span class="selection-circle"></span>
+        Sliding Window Visualizer
+      </div>
+
+      <div class="algobox" onclick="redirectTo('Algorithm/binary search.html')">
+        <b>Binary Search</b>
+        <span class="selection-circle"></span>
+        Binary Search Visualizer
+      </div>
+
+      <div class="algobox" onclick="redirectTo('Algorithm/linked list.html')">
+        <b>Linked List</b>
+        <span class="selection-circle"></span>
+        Linked List Visualizer
+      </div>
+
+      <div class="algobox" onclick="redirectTo('Algorithm/quick sort.html')">
+        <b>Quick Sort</b>
+        <span class="selection-circle"></span>
+        Quick Sort Visualizer
+      </div>
+
+      <div class="algobox" onclick="redirectTo('Algorithm/two pointer.html')">
+        <b>Two Pointer Sort</b>
+        <span class="selection-circle"></span>
+        Two Pointer Visualizer
+      </div>
+
+      <div
+        class="algobox"
+        onclick="redirectTo('Algorithm/sieve of eratosthenes.html')"
+      >
+        <b>Sieve of Eratosthenes</b>
+        <span class="selection-circle"></span>
+        Sieve of Eratosthenes Visualizer
+      </div>
+    </div>
+
+    <div class="main-img">
+      <img src="Images/main.jpeg" alt="" height="100%" width="100%" />
+
+      <div class="content-container">
+        <div class="image-container">
+          <h1>
+            <span class="blue">Algo</span><span class="orange">Sphere</span>
+          </h1>
+        </div>
+
+        <div class="text-container">
+          Visualize How <br />
+          <span id="rotating-text">Stack</span>
+          <div class="subtext">are working...</div>
+        </div>
+
+        <div>
+          <button class="algo-button" onclick="scrollToContainer()">
+            See <i>Algorithms</i> in Action ▼
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="algo-container" style="background-color: #f37b4a">
+      <a href="Algorithm/queue.html" class="algo-card">
+        <img id="dropdown-img" src="Images/queue.png" alt="Queue Algorithm" />
+        <div class="algo-title">Queue</div>
+      </a>
+      <a href="Algorithm/stack.html" class="algo-card">
+        <img id="dropdown-img" src="Images/stack.png" alt="Stack Algorithm" />
+        <div class="algo-title">Stack</div>
+      </a>
+      <a href="Algorithm/bubble sort.html" class="algo-card">
+        <img id="dropdown-img" src="Images/bubble sort.png" alt="Bubble Sort" />
+        <div class="algo-title">Bubble Sort</div>
+      </a>
+      <a href="Algorithm/selection sort.html" class="algo-card">
+        <img
+          id="dropdown-img"
+          src="Images/selection sort.png"
+          alt="Selection Sort"
+        />
+        <div class="algo-title">Selection Sort</div>
+      </a>
+
+      <a href="Algorithm/merge sort.html" class="algo-card">
+        <img id="dropdown-img" src="Images/merge sort.png" alt="Merge Sort" />
+        <div class="algo-title">Merge Sort</div>
+      </a>
+
+      <a href="Algorithm/sliding window.html" class="algo-card">
+        <img
+          id="dropdown-img"
+          src="Images/sliding window.png"
+          alt="Sliding Window"
+        />
+        <div class="algo-title">Sliding Window</div>
+      </a>
+
+      <a href="Algorithm/binary search.html" class="algo-card">
+        <img id="dropdown-img" src="Images/bs.png" alt="Binary Search" />
+        <div class="algo-title">Binary Search</div>
+      </a>
+
+      <a href="Algorithm/linked list.html" class="algo-card">
+        <img id="dropdown-img" src="Images/LL.png" alt="Linked List" />
+        <div class="algo-title">Linked List</div>
+      </a>
+
+      <a href="Algorithm/quick sort.html" class="algo-card">
+        <img id="dropdown-img" src="Images/quicksort.png" alt="Quick Sort" />
+        <div class="algo-title">Quick Sort</div>
+      </a>
+
+      <a href="Algorithm/two pointer.html" class="algo-card">
+        <img id="dropdown-img" src="Images/two pointer.png" alt="Two Pointer" />
+        <div class="algo-title">Two Pointer</div>
+      </a>
+
+      <a href="Algorithm/sieve of eratosthenes.html" class="algo-card">
+        <img id="dropdown-img" src="Images/sieve.png" alt="Sieve" />
+        <div class="algo-title">Sieve</div>
+      </a>
+    </div>
+  </body>
+</html>
