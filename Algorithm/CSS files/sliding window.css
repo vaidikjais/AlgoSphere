@@ -1,0 +1,223 @@
+/* General styles */
+body {
+    font-family: eb-garamond;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 20px;
+}
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    height: 100vh;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    height: 100%;
+    align-items: flex-start;
+    position: relative;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    gap: 20px;
+    width: 30%;
+    height: 100%;
+}
+.overview, .instructions {
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+}
+.title {
+    font-size: large;
+    font-weight: bold;
+    font-family: eb-garamond;
+}
+.overview  { background-color: #d8e3ff; }
+.instructions { background-color: #ffd8f0; display: flex; flex-direction: column; }
+.pre-activity { background-color: #ffe4b3; }
+
+/* Button styling */
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    align-self: center;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.content {
+    font-family: eb-garamond;
+    font-size: large;
+}
+
+.input-data {
+    display: flex;
+    gap: 10px; 
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+#array,#window-size{
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 270px;
+    min-height: 40px;
+    min-width: 20px;
+}
+
+
+.start { background: #4db84d; color: white; }
+.next { background: #b32f2f; color: white; }
+.reset { background: #5d5df1; color: white; }
+#randomArrayButton{ background: #5a13e8; color: white;}
+
+
+
+/* Sliding Window visualization */
+.visualization {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+}
+
+.array-element {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.window-element {
+    background-color: #4CAF50;
+    color: white;
+    transform: scale(1.1);
+}
+
+
+
+@media(max-width : 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-section {
+        width: 100%;
+    }
+
+    .right-section {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .overview, .instructions {
+        width: 100%;
+    }
+}
+
+@media(max-width : 850px)
+{
+    .container{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .input-data {
+        flex-direction: column;
+    }
+
+    .left-section,.right-section,.overview,.instructions{
+        width: 100%;
+    }
+    #controls{
+        display: block;
+    }
+
+    ul{
+        padding-left: 0;
+    }
+}
+
+@media(max-width : 550px)
+{
+    ul{
+        padding-left: 20px;
+        margin-top: 0;
+    }
+
+    body{
+        padding: 0px;
+        border-radius: 0;
+    }
+
+    .left-section, .overview, .instructions{
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 415px) {
+
+    .array-element {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 353px) {
+
+    .array-element {
+        font-size: 12px;
+        padding: 4px;
+    }
+}
