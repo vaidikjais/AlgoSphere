@@ -1,0 +1,182 @@
+body {
+    font-family: eb-garamond;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 20px;
+}
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px; 
+    
+}
+.left-section {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    height: auto;
+}
+.right-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 30%;
+    height: auto;
+    overflow-y: auto;
+}
+.overview, .instructions {
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+}
+.title {
+    font-size: large;
+    font-weight: bold;
+    font-family: eb-garamond;
+}
+.overview { background-color: #d8e3ff; }
+.instructions { background-color: #ffd8f0; display: flex; flex-direction: column; }
+.pre-activity { background-color: #ffe4b3; }
+
+
+ul {
+    padding-left: 20px;
+}
+
+
+.content{
+    font-family: eb-garamond;
+    font-size: large;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    justify-content: center;
+    gap: 5px;
+    margin: 20px auto;
+    width: min(500px, 85vw);
+
+} 
+
+.box {
+    width: auto; 
+    aspect-ratio: 1/1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: white;
+}
+
+
+#controls {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 10px;
+    margin-top: 10px;
+    
+}
+
+#speed-control {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+#element{
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 270px;
+    min-height: 40px;
+    min-width: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.start {background: rgb(71, 101, 142); color: white;}
+.clear {background-color: rgb(57, 57, 106); color: white;}
+
+.prime{
+    background-color: rgb(162, 106, 106);
+    color: black;
+}
+
+.non-prime{
+    background-color: rgb(25, 160, 160);
+    color: white;
+}
+
+.processing{
+    background-color: rgb(221, 105, 124);
+}
+
+@media(max-width : 768px)
+{
+    .container{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-section{
+        width: 100%;
+    }
+
+    .right-section{
+        width: 100%;
+    }
+
+    .overview, .instructions{
+        width: 100%;
+        display: block;
+    }
+}
+
+@media(max-width : 376px)
+{
+    body{
+        padding: 0px;
+        border-radius: 0;
+    }
+
+    .left-section, .overview, .instructions{
+        border-radius: 0;
+    }
+}
