@@ -7,7 +7,7 @@ Algosphere is a web-based algorithm visualizer that helps users understand how d
 <h3>Features</h3>
 
 <ul>
-  <li>11 Algorithms Visualized – Sorting, Searching, and more!</li>
+  <li>Algorithms & Data Structures Visualized – Sorting, Searching, Linked Lists, and more!</li>
   <li>Real-Time Animations – Step-by-step execution of algorithms.</li>
   <li>User-Friendly Interface – Simple and interactive UI.</li>
   <li>Custom Inputs – Users can modify array size and values.</li>
